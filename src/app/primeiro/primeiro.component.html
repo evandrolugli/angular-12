@@ -1,0 +1,31 @@
+<p>Primeiro Component</p>
+
+<!-- {{ nome }}
+<p [innerHtml]="nome" > texto </p>
+<input type="text" #texto> -->
+
+<!-- <button (click)="mostrarMensagem()" >Clique aqui</button> -->
+
+<div class="row" >
+    <div class="col-3">
+        <button 
+            (click)="alteraString()"
+            class="btn btn-primary btn  -lg tamanho-maior">
+            BTN 1
+        </button>
+    </div>
+    
+    <div class="col-8">
+        <button [class]="minhaClasse" *ngIf="minhaClasse == 'btn-success'" > BTN 2</button>
+    </div>
+</div>
+
+<p></p>
+
+<!-- <app-usuario-list [usuariosFilho]="usuarios"></app-usuario-list> -->
+
+<app-usuario-list></app-usuario-list>
+
+<p></p>
+
+
