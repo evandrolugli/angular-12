@@ -1,0 +1,17 @@
+<p>Pokemon List Component</p>
+
+<app-pokemon-detalhe [pokemonFilho]="pokemonSelecionado"></app-pokemon-detalhe>
+
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>URL</th>
+        <th>Ações</th>
+    </tr>
+    <tr *ngFor="let poke of pokemons?.results">
+        <td>{{poke | json }}</td>
+        <!-- <td>{{poke.name}}</td>
+        <td>{{poke.url}}</td> -->
+        <td><button class="btn btn-info" (click)="selecionarPokemon(poke.url)">Selecionar</button></td>   
+    </tr>
+</table>

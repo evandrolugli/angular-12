@@ -5,9 +5,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PrimeiroComponent } from './primeiro/primeiro.component';
+
 import { UsuariosModule } from './usuarios/usuarios.module';
+import { PokemonsModule } from './pokemons/pokemons.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import {NgbPaginationModule, NgbAlertModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -19,9 +20,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     AppRoutingModule,
     FormsModule,
     UsuariosModule,
+    PokemonsModule,
     NgbModule
-    // NgbPaginationModule,
-    // NgbAlertModule
   ],
   providers: [],
   bootstrap: [AppComponent]

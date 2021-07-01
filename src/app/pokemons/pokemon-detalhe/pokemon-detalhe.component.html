@@ -1,0 +1,11 @@
+<p>Pokemon Detalhe Component</p>
+
+<div class="card" *ngIf="pokemonFilho" >
+    <div class="card-body">
+        <p>Nome: {{pokemonFilho?.name | uppercase }} </p>
+        <p>Peso: {{pokemonFilho?.weight }} </p>
+
+        <img [src]="pokemonFilho?.sprites.back_default" alt="">
+    </div>
+</div>
+

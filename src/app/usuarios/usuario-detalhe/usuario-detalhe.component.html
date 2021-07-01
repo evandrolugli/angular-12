@@ -2,9 +2,12 @@
 
 <div class="card" *ngIf="usuariosFilho">
     <div class="card-body">
-        <!-- <p>Nome: <input text="usuariosFilho.value" /></p> -->
-        <p>Nome: {{ usuariosFilho.nome }} </p>
-        <p>E-mail: {{ usuariosFilho.email }}</p>
-        <p><button>Salvar</button></p>
+        <!-- <p>Nome: <input type="text" #nome value={{usuariosFilho.nome}}></p>
+        <p>E-mail: <input type="text" #email value={{usuariosFilho.email}} ></p>
+        <p><button (click)="salvarUsuario(nome.value, email.value)">Salvar</button></p> -->
+
+        <p>Nome: <input type="text" #nome [value]="usuariosFilho.nome"></p>
+        <p>E-mail: <input type="text" #email [value]="usuariosFilho.email" ></p>
+        <p><button (click)="salvarUsuario(nome.value, email.value)">Salvar</button></p>
     </div>
 </div>

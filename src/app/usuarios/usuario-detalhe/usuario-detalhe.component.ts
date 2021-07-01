@@ -5,16 +5,26 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
   templateUrl: './usuario-detalhe.component.html',
   styleUrls: ['./usuario-detalhe.component.css']
 })
+
 export class UsuarioDetalheComponent implements OnInit {
 
   constructor() { }
 
   @Input() usuariosFilho: any;
   @Output() usuarioSelecionado = new EventEmitter<string>();
-  
-  //@Output() pedido = new EventEmitter();
-
+  @Output() usuarioSalvarEmitter = new EventEmitter<any>();
 
   ngOnInit(): void {
   }
+
+  salvarUsuario(nome: string, email: string){
+
+    let obj = {
+      id: this.usuariosFilho.id,
+      nome: nome,
+      email: email
+    }
+    this.usuarioSalvarEmitter.next(obj)
+  }
+
 }
